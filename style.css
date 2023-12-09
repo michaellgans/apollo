@@ -1,15 +1,38 @@
+@font-face {
+    font-family: romanFont;
+    src: url(font/Dustismo_Roman.ttf);
+}
+
+@font-face {
+    font-family: romanFontBold;
+    src: url(font/Dustismo_Roman_Bold.ttf);
+}
+
+@font-face {
+    font-family: romanFontItalics;
+    src: url(font/Dustismo_Roman_Italic.ttf);
+}
+
+:root {
+    --border-color: grey;
+    --font-family: romanFont;
+    --font-family-bold: romanFontBold;
+    --font-family-italics: romanFontItalics;
+}
+
 .pageTitle {
     display: flex;
 }
 
 .pageTitleText {
     font-size: x-large;
-    margin-left: 30px;
+    font-family: var(--font-family);
+    margin: 0px 30px 0px 30px;
 }
 
 /* Text for questions */
 .characterQuestions {
-
+    font-size: large;
 }
 
 /* Title of sections */
@@ -19,11 +42,18 @@ h3 {
 
 /* Answers to questions */
 blockquote {
-    
+    font-family: var(--font-family);
+    color: #545454;
 }
 
 table {
     font-size: larger;
+}
+
+#table2 {
+    /* border-left: 2px solid; */
+    /* border-right: 2px solid; */
+    border-color: var(--border-color);
 }
 
 caption {
@@ -33,12 +63,35 @@ caption {
 
 th {
     text-align: left;
+    border-bottom: 2px solid;
+    border-color: var(--border-color);
 }
 
 td {
-
+    /* border: 2px solid; */
+    /* border-color: var(--border-color); */
 }
 
 .picture {
     object-fit: contain;
+}
+
+/* Stats section */
+.stats {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: baseline;
+    border: 2px solid;
+    border-color: var(--border-color);
+}
+
+.linkIcons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: aqua;
 }
