@@ -38,3 +38,7 @@ th {
 td {
 
 }
+
+.picture {
+    object-fit: contain;
+}
